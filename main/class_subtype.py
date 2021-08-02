@@ -1,3 +1,5 @@
+import mysql.connector
+import mysql_connect
 import re
 
 def class_subtype_check():
@@ -27,7 +29,9 @@ def class_subtype_check():
         class_subtype_check()
 
 def net_bit():
-    print("It worked: Network bits")
+    #print("It worked: Network bits")
+    mysql_connect.ipv4_a()
+
 
 def sub_mask():
 
@@ -72,7 +76,7 @@ def class_a():
     if(re.search(cl_a, user_in)):
 
         class_dict[user_in]()
-        
+
     else:
         print("Try again!")
         class_a()
